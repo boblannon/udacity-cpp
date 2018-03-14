@@ -8,6 +8,7 @@
 */
 
 #include<iostream>
+#include<cmath>
 
 int main()
 {
@@ -18,8 +19,16 @@ int main()
     //Dimensions of cone
     float coneRadius = 7.65;
     float coneHeight = 14;
-    
+
     float volCube, volSphere, volCone = 0;
-    
+
+    volCube = std::pow(cubeSide, 3);
+    volSphere = (4.0/3.0) * M_PI * std::pow(sphereRadius,3);
+    volCone = M_PI * std::pow(coneRadius,2) * (coneHeight/3.0);
+
+    std::cout << "Volume of the cube is " << volCube << "\n";
+    std::cout << "Volume of the sphere is " << volSphere << "\n";
+    std::cout << "Volume of the cone is " << volCone << "\n";
+
     return 0;
 }
